@@ -1,0 +1,12 @@
+# Задайте список из k чисел последовательности (1 + 1\k)^k и выведите на экран их сумму.
+
+k = int(input('Введите число: '))
+
+
+def set_squerence(k):
+    return [round((1 + 1 / x)**x, 0) for x in range(1, k + 1)]
+
+
+number = set_squerence(k)
+print(number)
+print(round(sum(number), 0))
