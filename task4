@@ -1,0 +1,25 @@
+# Задайте список из N элементов, заполненных числами из промежутка [-N, N].
+# Найдите произведение элементов на указанных пользователем через пробел позициях.
+
+from random import randint
+list_numbers = []
+for i in range(15):
+    list_numbers.append(randint(-15, 15))
+print(list_numbers)
+
+
+def set_numbers(list_numbers):
+    count = 0
+    for element in list_numbers:
+        count += 1
+    return count
+
+
+print('Количество элементов: ', set_numbers(list_numbers))
+
+a = int(input('Задайте позицию первого из списка: '))
+b = int(input('Задайте позицию второго из списка: '))
+
+for i in range(len(list_numbers)):
+    total = list_numbers[a - 1]*list_numbers[b - 1]
+print(f'Произведение: {list_numbers[a -1]} * {list_numbers[b -1]} =', total)
